@@ -1,0 +1,4 @@
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\Release\NES_EMU.exe.config
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\Release\NES_EMU.Form1.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\Release\NES_EMU.Resources.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\Release\NES_EMU.vbproj.GenerateResource.Cache

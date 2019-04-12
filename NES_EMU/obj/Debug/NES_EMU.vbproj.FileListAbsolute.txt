@@ -1,0 +1,44 @@
+C:\Users\aquintana\AppData\Local\Temporary Projects\NES_EMU\bin\Debug\NES_EMU.exe.config
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe.config
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\bin\Debug\NES_EMU.pdb
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\bin\Debug\NES_EMU.xml
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Form1.resources
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Resources.resources
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbproj.GenerateResource.Cache
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.exe
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.xml
+C:\Users\aquintana\Documents\Visual Studio 2012\Projects\NES_EMU\NES_EMU\obj\Debug\NES_EMU.pdb
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe.config
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.pdb
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.xml
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbprojAssemblyReference.cache
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Form1.resources
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Resources.resources
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbproj.GenerateResource.cache
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbproj.CoreCompileInputs.cache
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.exe
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.xml
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.pdb
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe.config
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbprojResolveAssemblyReference.cache
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Form1.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.Resources.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbproj.GenerateResource.Cache
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.exe
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.pdb
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\NES_EMU.xml
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\sfmlnet-system-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\Debug\sfmlnet-window-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.exe
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.xml
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.pdb
+C:\Users\provisional\Desktop\NES_EMU\NES_EMU\obj\Debug\NES_EMU.vbproj.CopyComplete
+C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\bin\Debug\NES_EMU.exe.config
+C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\NES_EMU.exe
+C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\NES_EMU.xml
+C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\NES_EMU.pdb
+C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\bin\Debug\CHIP-8.exe.config

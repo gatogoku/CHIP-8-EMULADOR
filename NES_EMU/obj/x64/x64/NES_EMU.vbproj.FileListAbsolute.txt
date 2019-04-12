@@ -1,0 +1,14 @@
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\NES_EMU.exe.config
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\NES_EMU.exe
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\NES_EMU.pdb
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\NES_EMU.xml
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\sfmlnet-audio-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\sfmlnet-graphics-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\sfmlnet-system-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\bin\x64\x64\sfmlnet-window-2.dll
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.Form1.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.Resources.resources
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.vbproj.GenerateResource.Cache
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.exe
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.xml
+C:\Users\aquintana\Desktop\NES_EMU\NES_EMU\obj\x64\x64\NES_EMU.pdb
