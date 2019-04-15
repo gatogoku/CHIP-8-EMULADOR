@@ -67,7 +67,7 @@ Public Class FRM_LOAD
     End Function
 
     Public Function INIT_EMU()
-        colores.Add(Color.Black) : colores.Add(Color.Blue) : colores.Add(Color.Cyan) : colores.Add(Color.Green) : colores.Add(Color.Magenta) : colores.Add(Color.Red) : colores.Add(Color.Yellow) : colores.Add(Color.White)
+        '  colores.Add(Color.Black) : colores.Add(Color.Blue) : colores.Add(Color.Cyan) : colores.Add(Color.Green) : colores.Add(Color.Magenta) : colores.Add(Color.Red) : colores.Add(Color.Yellow) : colores.Add(Color.White)
         Module1.Cpu = New CPU
         Dim X As Integer = 0
         xTimer = New System.Windows.Forms.Timer
@@ -114,6 +114,11 @@ Public Class FRM_LOAD
         x = Screen.PrimaryScreen.WorkingArea.Width - 400
         y = Screen.PrimaryScreen.WorkingArea.Height - 270
         Me.Location = New Point(x, y)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ColorDialog1.ShowDialog()
+        Module1.Game_Color = New Color(ColorDialog1.Color.R, ColorDialog1.Color.G, ColorDialog1.Color.B)
     End Sub
 End Class
 

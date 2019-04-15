@@ -15,11 +15,9 @@
     '0x200 - 0xF?? Program Rom and work RAM
     Public Structure MAPPERNROM0
         Public Shared Sub CARGAR_MEMORIA()
-
             For c As Integer = 0 To CPU_BANK_1_END : MAPPEDMEMORY.Add(Nothing) : MEMORY.Add(Nothing) : Next ' 3583 bytes of memory
             Dim index = 0
             For c As Integer = CPU_BANK_1_INIT To MEMHEX.Count + CPU_BANK_1_INIT - 1 : MAPPEDMEMORY(c) = MEMHEX(index) : index += 1 : Next
-
             ' index = 0
             ' For c As Integer = FONT_INIT To FONT_END - 1 : MEMORY_FONT.Add(MEMHEX(c)) : index += 1 : Next
             CONVERTTOHEXANDBIN(MAPPEDMEMORY)
@@ -47,20 +45,12 @@
             'Dim S = OPCODE And &HF000
             'Y = Convert.ToString(Int64.Parse(OPCODE), 16).ToUpper()
             'X = ("&H" + Y)
-
-
             DECODEDMEMORY.Add(("&H" + Hex((ROM.MEMORY(c) << 8) Or ROM.MEMORY(c + 1))))
             ' DECODEDMEMORY.Add(X)
-
         Next
-
     End Sub
 End Class
-
-
 ''''cpu backup 
-
-
 
 '  PC += 2
 
@@ -74,8 +64,6 @@ End Class
 '    Next i
 '    Return lTemp
 'End Function
-
-
 
 'Select Case (X)
 '    Case INDEX Like "0???" '0NNN	Salta a un código de rutina en NNN. Se usaba en los viejos computadores que implementaban Chip-8. Los intérpretes actuales lo ignoran

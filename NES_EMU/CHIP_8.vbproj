@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="PPU.vb" />
     <Compile Include="ROM.vb" />
+    <Compile Include="SOUND.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FRM_LOAD.resx">

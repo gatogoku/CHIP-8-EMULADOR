@@ -7,7 +7,6 @@ Imports SFML.Audio
 Imports SFML.System
 Public Class Graphics
     'Resolucion
-    
     Public WithEvents _window As RenderWindow
     Public fps = 60
     Public frameInterval = 1000
@@ -21,91 +20,66 @@ Public Class Graphics
     Public LastPixelsSample(31, 63) As Color
 
     Public Sub StartSFMLGraphics()
+        If Module1.Game_Color = Nothing Then Module1.Game_Color = New Color(255, 255, 255)
         ' miscolores = leerImagen()
-        cargarListaSprites()
-        mycustomSprite2 = fetchSprite(mycustomSprite.ToList)
-        _window = New RenderWindow(New VideoMode(ancho, alto, 0), "2D GRAPHICS CHIP-8   " & Module1.filename, Styles.Resize)
+        ' cargarListaSprites()
+        '  mycustomSprite2 = fetchSprite(mycustomSprite.ToList)
+        _window = New RenderWindow(New VideoMode(ancho, alto, 32), "2D GRAPHICS CHIP-8    -    GAME:  " & Module1.filename, Styles.None)
         _window.SetVisible(True)
+        _window.Position = (New SFML.System.Vector2i(0, 0)) : _window.Size = New SFML.System.Vector2i(1920, 1080)
         _window.SetFramerateLimit(fps)
-
         While _window.IsOpen
             Module1.joypad.fetchKeyBoard()
             Module1.Cpu.EMULATE_CPU()
-            _window.DispatchEvents()
-            _window.Display()
+            '  _window.DispatchEvents()
+            If Module1.Cpu.DrawSprite Then
+                _window.Display()
+                Module1.Cpu.DrawSprite = False
+            End If
             'Threading.Thread.Sleep(1000)
-            ' setPixelColor()
-            ' LoadCurrentScreen()
-            '_window.Position = (New SFML.System.Vector2i(50, 50))
-            'If Module1.Cpu.DRAW_SCREEN_FLAG Then
-            ' DRAW_SCREEN()
-            'End If
-            '_window.Clear(colorPalete(I))
+            'setPixelColor():  'LoadCurrentScreen()
         End While
         _window.Close()
     End Sub
-
-    Public Function leerImagen()
-        Dim cols As New List(Of Color) : Dim Index As Integer = 0 : Dim tex As Image = New Texture("C:\star.png", New IntRect(0, 0, alto, ancho)).CopyToImage
-        For i As Integer = 0 To alto - 1 : For j As Integer = 0 To ancho - 1
-                cols.Add(tex.GetPixel(j, i)) : Index += 1
-            Next : Next
-        Return cols
-    End Function
-    Dim index2 = 0
-
-    Public Sub cargarListaSprites()
-        Dim index = 0
-        For c As Integer = 0 To Module1.CHRMEMBIN.Count - 1 Step 16
-            Dim l As New List(Of String)
-            For d As Integer = 0 To 15 : l.Add(Module1.CHRMEMBIN(d + index)) : Next
-            index += 16 : ListSprite.AddRange(fetchSprite(l))
-        Next
-    End Sub
-    Public Function fetchSprite(ByVal bytes As List(Of String))
-        'bytes = New List(Of Integer):bytes.Add(Convert.ToInt32("01001101", 2)):For c As Integer = 1 To 15: bytes.Add(0):'Next:bytes.Item(7) = Convert.ToInt32("11000100", 2)
-        Dim spriteRows(7) As String : Dim row As String = ""
-        For d = 0 To 7 : For c = 0 To 7
-                row = row & Module1.DecToBinary(bytes(d + 8)).ToString.Substring(c, 1) + Module1.DecToBinary(bytes(d)).ToString.Substring(c, 1)
-            Next : spriteRows(d) = row : row = "" : Next
-        Return spriteRows
-    End Function
-
     Public Sub DibujarSpritesChip8(ByVal SCREEN_ARRAY)
-        '_window.Clear()
-        Dim tamaño = 1 : Dim rnd = New Random : Dim iX = 0 : Dim tex = New Texture(ancho, alto).CopyToImage ':tex.CreateMaskFromColor(New SFML.Graphics.Color(0, 0, 0))
+        _window.Clear()
+        Dim tex = New Texture(ancho, alto).CopyToImage ': tex.CreateMaskFromColor(New SFML.Graphics.Color(0, 0, 0))
+        Dim x As Color
         For c As Integer = 0 To 31
             For d As Integer = 0 To 63
-                tex.SetPixel(d, c, colorPalete(Module1.DecToBinary(Module1.Cpu.ScreenData(c * 64 + d))))
+                If Module1.DecToBinary(Module1.Cpu.ScreenData(c * 64 + d)) = 1 Then
+                    tex.SetPixel(d, c, Game_Color)
+                End If
             Next
         Next
-
-        'For c As Integer = 0 To 31 : For d As Integer = 0 To 63
-        '        If LastPixelsSample(c, d) <> tex.GetPixel(d, c) Then VX = 1 : Exit For
-        '    Next : Next
         Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, ancho, alto)), New IntRect(0, 0, ancho, alto)) : _window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha))
-
     End Sub
 
+    'Public Function leerImagen()
+    '    Dim cols As New List(Of Color) : Dim Index As Integer = 0 : Dim tex As Image = New Texture("C:\star.png", New IntRect(0, 0, alto, ancho)).CopyToImage
+    '    For i As Integer = 0 To alto - 1 : For j As Integer = 0 To ancho - 1
+    '            cols.Add(tex.GetPixel(j, i)) : Index += 1
+    '        Next : Next
+    '    Return cols
+    'End Function
+    'Dim index2 = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    'Public Sub cargarListaSprites()
+    '    Dim index = 0
+    '    For c As Integer = 0 To Module1.CHRMEMBIN.Count - 1 Step 16
+    '        Dim l As New List(Of String)
+    '        For d As Integer = 0 To 15 : l.Add(Module1.CHRMEMBIN(d + index)) : Next
+    '        index += 16 : ListSprite.AddRange(fetchSprite(l))
+    '    Next
+    'End Sub
+    'Public Function fetchSprite(ByVal bytes As List(Of String))
+    '    'bytes = New List(Of Integer):bytes.Add(Convert.ToInt32("01001101", 2)):For c As Integer = 1 To 15: bytes.Add(0):'Next:bytes.Item(7) = Convert.ToInt32("11000100", 2)
+    '    Dim spriteRows(7) As String : Dim row As String = ""
+    '    For d = 0 To 7 : For c = 0 To 7
+    '            row = row & Module1.DecToBinary(bytes(d + 8)).ToString.Substring(c, 1) + Module1.DecToBinary(bytes(d)).ToString.Substring(c, 1)
+    '        Next : spriteRows(d) = row : row = "" : Next
+    '    Return spriteRows
+    'End Function
 
     'Public Sub setPixelColor()
     '    Dim tamaño = 1 : Dim rnd = New Random : Dim iX = 0 : Dim iY = 0 : Dim tex = New Texture(ancho, alto).CopyToImage '  Dim COL = colorPalete(index)
@@ -135,7 +109,6 @@ Public Class Graphics
     '    Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, ancho, alto)), New IntRect(0, 0, ancho, alto)) : _window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha))
     '    ' Threading.Thread.Sleep(1000)
     'End Sub
-
 
     'Public Sub DRAW_SCREEN()
     '    Dim ind = 0
@@ -169,9 +142,6 @@ Public Class Graphics
     '    Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, Module1.ancho, Module1.alto)), New IntRect(0, 0, Module1.ancho, Module1.alto)) : Module1.graphics._window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha))
     'End Sub
 
-
-    
-
     'Public Function LoadCurrentScreen()
     '    'bytes = New List(Of Integer):bytes.Add(Convert.ToInt32("01001101", 2)):For c As Integer = 1 To 15: bytes.Add(0):'Next:bytes.Item(7) = Convert.ToInt32("11000100", 2)
 
@@ -181,7 +151,6 @@ Public Class Graphics
     '        Next : Next
     '    Return Nothing
     'End Function
-
 
     ''Public Sub DibujarSpritesChip8(ByVal INDEX, X, Y, N, VX)
     ''    Dim tamaño = 1 : Dim rnd = New Random : Dim iX = 0 : Dim tex = New Texture(ancho, alto).CopyToImage ':tex.CreateMaskFromColor(New SFML.Graphics.Color(0, 0, 0))
@@ -195,16 +164,6 @@ Public Class Graphics
     ''    Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, ancho, alto)), New IntRect(0, 0, ancho, alto)):_window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha))
 
     ''End Sub
-
-
-
-    
-
-
-
-
-
-
 
 
     'Public Sub DibujarSpritesChip8(ByVal INDEX, X_OPCODE, Y_OPCODE, N_OPCODE, VX)
@@ -227,10 +186,6 @@ Public Class Graphics
     'End Sub
 
 
-
-
-
-
     'Dim tamaño = 1 : Dim rnd = New Random : Dim iX = 0 : Dim iY = 512 : Dim tex = New Texture(Module1.graphics.ancho, Module1.graphics.alto).CopyToImage '  Dim COL = colorPalete(index)
     'tex.CreateMaskFromColor(New SFML.Graphics.Color(0, 0, 200))
 
@@ -242,8 +197,6 @@ Public Class Graphics
     '' tex.SetPixel(VX, VY, colorPalete(Module1.DecToBinary(ROM.MEMORY(PC + INDEX)).Substring(iX, 1))) : iX += 1 : If iX > 7 Then iX = 0
     'Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, Module1.graphics.ancho, Module1.graphics.alto)), New IntRect(0, 0, Module1.graphics.ancho, Module1.graphics.alto))
     'Module1.graphics._window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha)) ': Threading.Thread.Sleep(1000)
-
-
 
     'DRAW_SCREEN_FLAG = True
     ''   Dim X2 = VY : Dim Y2 = VX
@@ -260,7 +213,5 @@ Public Class Graphics
     'Next
     'Dim bufferSprite2 As New Sprite(New Texture(tex, New IntRect(0, 0, Module1.graphics.ancho, Module1.graphics.alto)), New IntRect(0, 0, Module1.graphics.ancho, Module1.graphics.alto))
     'Module1.graphics._window.Draw(bufferSprite2, New RenderStates(BlendMode.Alpha)) 'Threading.Thread.Sleep(1000)
-
-
 
 End Class

@@ -13,3 +13,18 @@ C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\CHIP-8.exe
 C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\CHIP-8.xml
 C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\CHIP-8.pdb
 C:\Users\aquintana\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Debug\CHIP_8.vbprojResolveAssemblyReference.cache
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\CHIP-8.exe.config
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP-8.exe
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP-8.xml
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP-8.pdb
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\CHIP-8.exe
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\CHIP-8.pdb
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\CHIP-8.xml
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\sfmlnet-system-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Debug\sfmlnet-window-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP_8.vbprojResolveAssemblyReference.cache
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP_8.FRM_LOAD.resources
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP_8.Resources.resources
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Debug\CHIP_8.vbproj.GenerateResource.Cache
