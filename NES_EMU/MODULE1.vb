@@ -21,10 +21,9 @@ Module Module1
 
 
     Public KEY_PRESSED As String
-
+    ' Public AllCPUParams As New List(Of CPU.CPUParams)
     Public OPCODES2 As New List(Of Byte)
     Public OPCODESSTR As New List(Of String)
-
     Dim col = New Color(&H75, &H75, &H75)
     Public colorPalete() As SFML.Graphics.Color = {
     New Color(&H0, &H0, &H0),New Color(&H0, 247, 255),
@@ -195,7 +194,7 @@ Module Module1
     Public Function HextoBinary(HexVal As String) As String
         Dim binVal As String
         If Len(HexVal) = 1 Then
-            binVal = Hex_MAP_BIN2(HexVal)
+            binVal = Hex_MAP_BIN(HexVal)
             If binVal <> "" Then
                 HextoBinary = binVal
                 Debug.Print(HexVal & "-" & binVal)
@@ -213,66 +212,45 @@ Module Module1
     End Function
 
 
+    Public Function Hex_MAP_BIN(HexVal As String) As String
+        Select Case UCase(HexVal)
+            Case "0"
+                Hex_MAP_BIN = "0000"
+            Case "1"
+                Hex_MAP_BIN = "0001"
+            Case "2"
+                Hex_MAP_BIN = "0010"
+            Case "3"
+                Hex_MAP_BIN = "0011"
+            Case "4"
+                Hex_MAP_BIN = "0100"
+            Case "5"
+                Hex_MAP_BIN = "0101"
+            Case "6"
+                Hex_MAP_BIN = "0110"
+            Case "7"
+                Hex_MAP_BIN = "0111"
+            Case "8"
+                Hex_MAP_BIN = "1000"
+            Case "9"
+                Hex_MAP_BIN = "1001"
+            Case "A"
+                Hex_MAP_BIN = "1010"
+            Case "B"
+                Hex_MAP_BIN = "1011"
+            Case "C"
+                Hex_MAP_BIN = "1100"
+            Case "D"
+                Hex_MAP_BIN = "1101"
+            Case "E"
+                Hex_MAP_BIN = "1110"
+            Case "F"
+                Hex_MAP_BIN = "1111"
+            Case Else
 
-    Public Hex_MAP_BIN2 = {
-         &H0,
-         &H1,
-         &H2,
-         &H3,
-         &H4,
-         &H5,
-         &H6,
-         &H7,
-         &H8,
-         &H9,
-         &HA,
-         &HB,
-         &HC,
-         &HD,
-         &HE,
-         &HF
-    }
+        End Select
 
-
-    'Public Function Hex_MAP_BIN2(HexVal As String) As String
-    '    Select Case UCase(HexVal)
-    '        Case "0"
-    '            Hex_MAP_BIN = "0000"
-    '        Case "1"
-    '            Hex_MAP_BIN = "0001"
-    '        Case "2"
-    '            Hex_MAP_BIN = "0010"
-    '        Case "3"
-    '            Hex_MAP_BIN = "0011"
-    '        Case "4"
-    '            Hex_MAP_BIN = "0100"
-    '        Case "5"
-    '            Hex_MAP_BIN = "0101"
-    '        Case "6"
-    '            Hex_MAP_BIN = "0110"
-    '        Case "7"
-    '            Hex_MAP_BIN = "0111"
-    '        Case "8"
-    '            Hex_MAP_BIN = "1000"
-    '        Case "9"
-    '            Hex_MAP_BIN = "1001"
-    '        Case "A"
-    '            Hex_MAP_BIN = "1010"
-    '        Case "B"
-    '            Hex_MAP_BIN = "1011"
-    '        Case "C"
-    '            Hex_MAP_BIN = "1100"
-    '        Case "D"
-    '            Hex_MAP_BIN = "1101"
-    '        Case "E"
-    '            Hex_MAP_BIN = "1110"
-    '        Case "F"
-    '            Hex_MAP_BIN = "1111"
-    '        Case Else
-
-    '    End Select
-
-    'End Function
+    End Function
 
     Public Function HexToDecimal(HexVal As String) As Long
         Dim binVal As String
