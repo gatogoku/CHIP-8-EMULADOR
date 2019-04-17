@@ -13,6 +13,7 @@ Public Class FRM_LOAD
     Public gOn As Boolean = True
     'End Function
     Public Sub OPEN_ROM(filename As String)
+        MEMBIN.Clear() : MEMDEC.Clear() : MEMHEX.Clear()
         Dim path As String = filename
         Dim fs As FileStream
         If File.Exists(path) = False Then
@@ -85,23 +86,7 @@ Public Class FRM_LOAD
         '  xTimer.Start()
     End Function
 
-    Private Sub Timer_Tick() Handles xTimer.Tick
-
-        ' EMULATE_CPU_CICLE()
-        ' If the draw flag is set, update the screen
-        '  If (Module1.Cpu.DRAW_SCREEN_FLAG) Then
-        '    Module1.graphics.pintarSprite()
-        'End If
-
-        'Store key press state (Press and Release)
-        ' myChip8.setKeys();	
-
-    End Sub
-
-    Public Sub EMULATE_CPU_CICLE()
-        '  Module1.Cpu.EMULATE_CPU()
-    End Sub
-
+   
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         gOn = False : If Not Module1.graphics._window Is Nothing AndAlso Module1.graphics._window.IsOpen Then Module1.graphics._window.Close()
         Application.Exit() : Me.Close()

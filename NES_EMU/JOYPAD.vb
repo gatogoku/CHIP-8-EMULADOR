@@ -59,6 +59,10 @@
             KEY_PRESSED = Hex_MAP_BIN(0) '    KEY_PRESSED = CodigosAsciRemap2(15)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Escape) Then
             Module1.graphics._window.Close()
+            EMULATOR_IS_RUNNING = False
+            'Module1.Cpu.initialize()
+
+
         Else
             KEY_PRESSED = ""
         End If

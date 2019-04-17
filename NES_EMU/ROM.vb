@@ -15,6 +15,8 @@
     '0x200 - 0xF?? Program Rom and work RAM
     Public Structure MAPPERNROM0
         Public Shared Sub CARGAR_MEMORIA()
+            ROM.MEMORY.Clear() : MAPPEDMEMORY.Clear() : MEMORYBIN.Clear() : MEMORYHEX.Clear() : DECODEDMEMORY.Clear()
+            ' : MEMBIN.Clear() : MEMDEC.Clear() : MEMHEX.Clear()
             For c As Integer = 0 To CPU_BANK_1_END : MAPPEDMEMORY.Add(Nothing) : MEMORY.Add(Nothing) : Next ' 3583 bytes of memory
             Dim index = 0
             For c As Integer = CPU_BANK_1_INIT To MEMHEX.Count + CPU_BANK_1_INIT - 1 : MAPPEDMEMORY(c) = MEMHEX(index) : index += 1 : Next

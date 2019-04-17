@@ -28,7 +28,8 @@ Public Class Graphics
         _window.SetVisible(True)
         _window.Position = (New SFML.System.Vector2i(0, 0)) : _window.Size = New SFML.System.Vector2i(1920, 1080)
         _window.SetFramerateLimit(fps)
-        While _window.IsOpen
+        EMULATOR_IS_RUNNING = True
+        While _window.IsOpen And EMULATOR_IS_RUNNING
             Module1.joypad.fetchKeyBoard()
             Module1.Cpu.EMULATE_CPU()
             '  _window.DispatchEvents()

@@ -178,7 +178,7 @@ Public Class CPU
                 'End While
                 Do
                     Module1.joypad.fetchKeyBoard()
-                Loop While KEY_PRESSED = ""
+                Loop While KEY_PRESSED = "" And EMULATOR_IS_RUNNING
                 If KEY_PRESSED <> "" Then V(X) = KEY_PRESSED
                 '   MsgBox(KEY_PRESSED)
                 PC += 2

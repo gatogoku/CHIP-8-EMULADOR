@@ -1,5 +1,7 @@
 ﻿Imports SFML.Graphics
 Module Module1
+
+    Public EMULATOR_IS_RUNNING As Boolean
     Public filename As String = ""
     Public Game_Color As Color
 
@@ -29,7 +31,7 @@ Module Module1
 
     Dim col = New Color(&H75, &H75, &H75)
     Public colorPalete() As SFML.Graphics.Color = {
-    New Color(&H0, &H0, &H0),New Color(&H0, 247, 255),
+    New Color(&H0, &H0, &H0), New Color(&H0, 247, 255),
         New Color(&H27, &H1B, &H8F),
         New Color(&H0, &H0, &HAB),
         New Color(&H47, &H0, &H9F),
@@ -281,7 +283,7 @@ Module Module1
         Dim decVal As Long
 
         binVal = HextoBinary(HexVal)
-        If binVal = "01011110101101010010" Then MsgBox ("OK")
+        If binVal = "01011110101101010010" Then MsgBox("OK")
 
         decVal = BinaryToDecimal(binVal)
         HexToDecimal = decVal
