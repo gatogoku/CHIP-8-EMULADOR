@@ -7,62 +7,58 @@
     15, 1, 2, 3, 12, 4, 5, 6, 13, 7, 8, 9, 14, 10, 0, 11
 }
 
-
     Public Sub fetchKeyBoard()
         If Keyboard.IsKeyPressed(Keyboard.Key.Num1) Then
             ' MsgBox(Keyboard.Key.Num1)
             KEY_PRESSED = Hex_MAP_BIN(1)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Num2) Then
             ' MsgBox((Keyboard.Key.Num2))
-            KEY_PRESSED = Hex_MAP_BIN(2) '  KEY_PRESSED = CodigosAsciRemap2(1)
+            KEY_PRESSED = Hex_MAP_BIN(2)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Num3) Then
             ' MsgBox((Keyboard.Key.Num3))
-            KEY_PRESSED = Hex_MAP_BIN(3) '   KEY_PRESSED = CodigosAsciRemap2(2)
+            KEY_PRESSED = Hex_MAP_BIN(3)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Num4) Then
             '  MsgBox((Keyboard.Key.Num4))
-            KEY_PRESSED = Hex_MAP_BIN(4) '   KEY_PRESSED = CodigosAsciRemap2(3)
+            KEY_PRESSED = Hex_MAP_BIN(4)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Q) Then
             '  MsgBox((Keyboard.Key.Q))
-            KEY_PRESSED = Hex_MAP_BIN(5) '   KEY_PRESSED = CodigosAsciRemap2(4)
+            KEY_PRESSED = Hex_MAP_BIN(5)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.W) Then
             '  MsgBox((Keyboard.Key.W))
-            KEY_PRESSED = Hex_MAP_BIN(6) '  KEY_PRESSED = CodigosAsciRemap2(5)
+            KEY_PRESSED = Hex_MAP_BIN(6)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.E) Then
             '   MsgBox((Keyboard.Key.E))
-            KEY_PRESSED = Hex_MAP_BIN(7) '  KEY_PRESSED = CodigosAsciRemap2(6)
+            KEY_PRESSED = Hex_MAP_BIN(7)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.R) Then
             '  MsgBox((Keyboard.Key.R))
-            KEY_PRESSED = Hex_MAP_BIN(8) '  KEY_PRESSED = CodigosAsciRemap2(7)
+            KEY_PRESSED = Hex_MAP_BIN(8)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.A) Then
             '  MsgBox((Keyboard.Key.A))
-            KEY_PRESSED = Hex_MAP_BIN(9) '  KEY_PRESSED = CodigosAsciRemap2(8)
+            KEY_PRESSED = Hex_MAP_BIN(9)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.S) Then
-            KEY_PRESSED = Hex_MAP_BIN(10) '  KEY_PRESSED = CodigosAsciRemap2(9)
+            KEY_PRESSED = Hex_MAP_BIN(10)
             ' MsgBox((Keyboard.Key.S))
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.D) Then
             '  MsgBox((Keyboard.Key.D))
-            KEY_PRESSED = Hex_MAP_BIN(11) '   KEY_PRESSED = CodigosAsciRemap2(10)
+            KEY_PRESSED = Hex_MAP_BIN(11)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.F) Then
             ' MsgBox((Keyboard.Key.F))
-            KEY_PRESSED = Hex_MAP_BIN(12) '   KEY_PRESSED = CodigosAsciRemap2(11)
+            KEY_PRESSED = Hex_MAP_BIN(12)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Z) Then
             '  MsgBox((Keyboard.Key.Z))
-            KEY_PRESSED = Hex_MAP_BIN(13) '   KEY_PRESSED = CodigosAsciRemap2(12)
+            KEY_PRESSED = Hex_MAP_BIN(13)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.X) Then
             ' MsgBox((Keyboard.Key.X))
-            KEY_PRESSED = Hex_MAP_BIN(14) '   KEY_PRESSED = CodigosAsciRemap2(13)
+            KEY_PRESSED = Hex_MAP_BIN(14)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.C) Then
             ' MsgBox((Keyboard.Key.C))
-            KEY_PRESSED = Hex_MAP_BIN(15) '   KEY_PRESSED = CodigosAsciRemap2(14)
+            KEY_PRESSED = Hex_MAP_BIN(15)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.V) Then
             ' MsgBox((Keyboard.Key.V))
-            KEY_PRESSED = Hex_MAP_BIN(0) '    KEY_PRESSED = CodigosAsciRemap2(15)
+            KEY_PRESSED = Hex_MAP_BIN(0)
         ElseIf Keyboard.IsKeyPressed(Keyboard.Key.Escape) Then
-            Module1.graphics._window.Close()
+            Module1.Graphics._window.Close()
             EMULATOR_IS_RUNNING = False
-            'Module1.Cpu.initialize()
-
-
         Else
             KEY_PRESSED = ""
         End If

@@ -35,35 +35,39 @@ Partial Class FRM_LOAD
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button1.Location = New System.Drawing.Point(12, 33)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(227, 39)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "SELECT ROM"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button2.Location = New System.Drawing.Point(13, 134)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(227, 39)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "CLOSE"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Button3.Location = New System.Drawing.Point(13, 86)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(227, 39)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "SELECT COLOR"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'FRM_LOAD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(252, 210)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)

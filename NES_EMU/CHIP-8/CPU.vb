@@ -1,5 +1,6 @@
 ﻿Imports CHIP_8.Graphics, CHIP_8.Module1
 Public Class CPU
+    ' <value>..\Resources\vfd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     Dim DelayTimer, SoundTimer As Integer
     Public V As New List(Of Integer)
     Public STACK As New List(Of Integer)
@@ -53,7 +54,6 @@ Public Class CPU
         '    End If
         '    MemoryOpcodes.Add(opc)
         'Next
-
     End Sub
 
     Public Sub EMULATE_CPU()
@@ -66,7 +66,6 @@ Public Class CPU
         N = Val("&H" & OPCODE.Substring(3, 1))
         NN = Val("&H" & OPCODE.Substring(2, 2))
         NNN = Val("&H" & OPCODE.Substring(1, 3))
-
         Select Case True
             Case OPCODE Like "00E0" '00E0 
                 ClearScreen() : PC += 2     ' Clears the screen
@@ -150,34 +149,17 @@ Public Class CPU
                 Next
                 DrawSprite = True
                 PC += 2
-                Module1.graphics.DibujarSpritesChip8(ScreenData)
+                Module1.Graphics.DibujarSpritesChip8(ScreenData)
                 '  Threading.Thread.Sleep(200)
-
             Case OPCODE Like "E?9E" 'EX9E
                 If V(X).ToString.Equals(KEY_PRESSED) Then PC += 4 Else PC += 2
-                'If Keys(V(X)) = True Then
-                '    PC += 4
-                'Else
-                '    PC += 2
-                'End If
             Case OPCODE Like "E?A1" 'EXA1
                 If V(X).ToString.Equals(KEY_PRESSED) Then PC += 4 Else PC += 2
-                'If Keys(V(X)) = False Then
-                '    PC += 4
-                'Else
-                '    PC += 2
-                'End If
             Case OPCODE Like "F?07" 'FX07	
                 V(X) = DelayTimer : PC += 2
             Case OPCODE Like "F?0A" 'FX0A
-                'While Emulating = True
-                '    If KeyPressFired = True Then
-                '        V(X) = LastKeyPress         ' Kinda hacky, but I can't think of a better way
-                '        Exit While
-                '    End If
-                'End While
                 Do
-                    Module1.joypad.fetchKeyBoard()
+                    Module1.JoyPad.fetchKeyBoard()
                 Loop While KEY_PRESSED = "" And EMULATOR_IS_RUNNING
                 If KEY_PRESSED <> "" Then V(X) = KEY_PRESSED
                 '   MsgBox(KEY_PRESSED)
@@ -187,8 +169,7 @@ Public Class CPU
             Case OPCODE Like "F?18" 'FX18	
                 SoundTimer = V(X) : PC += 2
             Case OPCODE Like "F?1E" 'FX1E
-
-                If INDEX + V(X) > 4095 Then     ' Stupid VB.NET :(
+                If INDEX + V(X) > 4095 Then
                     INDEX = INDEX + V(X) - 4096
                 Else
                     INDEX += V(X)
@@ -236,25 +217,16 @@ Public Class CPU
                 ROM.MEMORY(INDEX + 2) = (V(X) Mod 100) Mod 10   ' And ones in I + 2
                 PC += 2
             Case OPCODE Like "F?55" 'FX55	Almacena el contenido de V0 a VX en la memoria empezando por la dirección I
-                ' For c As Integer = INDEX To INDEX + 16 - 1 : ROM.MEMORY(INDEX) = V(c - INDEX) : Next
-                ' INDEX = HexToDecimal(INDEX) + HexToDecimal(X) + HexToDecimal(1)
-                'ROM.MEMORY(INDEX + 1) = V(X) : ROM.MEMORY(INDEX + 2) = V(Y)
                 For a As Integer = 0 To X : ROM.MEMORY(INDEX + a) = V(a) : Next : PC += 2
             Case OPCODE Like "F?65" 'FX65	Almacena el contenido de la dirección de memoria I en los registros del V0 al VX
-                ' For c As Integer = INDEX To INDEX + 16 - 1 : V(c - INDEX) = ROM.MEMORY(INDEX) : Next
-                '   INDEX = HexToDecimal(INDEX) + HexToDecimal(X) + HexToDecimal(1)
-                '   V(X) = ROM.MEMORY(INDEX + 1) : Y = ROM.MEMORY(INDEX + 2)
                 For a As Integer = 0 To X : V(a) = ROM.MEMORY(INDEX + a) : Next : PC += 2
-
             Case Else
                 MsgBox("OPCODE INVALIDO: " & OPCODE & vbNewLine & "PC: " & PC & vbNewLine & "I: " & INDEX & vbNewLine, MsgBoxStyle.OkOnly, "CHIP-8 Error")
         End Select
-
         If DelayTimer > 0 Then
             DelayTimer -= 1
         End If
         If SoundTimer > 0 Then
-            'Module1.Audio.PlaySound()
             My.Computer.Audio.Play("beep.wav", AudioPlayMode.Background)
             SoundTimer -= 1
         End If

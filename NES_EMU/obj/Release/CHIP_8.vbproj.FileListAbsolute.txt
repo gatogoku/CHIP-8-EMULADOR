@@ -25,22 +25,21 @@ C:\Users\provisional\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Release\CHIP_8.vbproj.Co
 C:\Users\provisional\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Release\CHIP-8.exe
 C:\Users\provisional\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Release\CHIP-8.xml
 C:\Users\provisional\Desktop\CHIP-8 PROJECT\NES_EMU\obj\Release\CHIP-8.pdb
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.exe.config
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.exe
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.pdb
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.exe
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.pdb
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-audio-2.dll
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-graphics-2.dll
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-system-2.dll
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-window-2.dll
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.vbprojResolveAssemblyReference.cache
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.FRM_LOAD.resources
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.Resources.resources
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.vbproj.GenerateResource.Cache
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.xml
-C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.xml
 C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master - copia\NES_EMU\bin\Release\CHIP-8.exe.config
 C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master - copia\NES_EMU\obj\Release\CHIP-8.exe
 C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master - copia\NES_EMU\obj\Release\CHIP-8.xml
 C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master - copia\NES_EMU\obj\Release\CHIP-8.pdb
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.exe.config
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.exe
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.pdb
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\CHIP-8.xml
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-audio-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-graphics-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-system-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\bin\Release\sfmlnet-window-2.dll
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.FRM_LOAD.resources
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.Resources.resources
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP_8.vbproj.GenerateResource.Cache
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.exe
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.xml
+C:\Users\aquintana\Desktop\CHIP-8-EMULADOR-master\NES_EMU\obj\Release\CHIP-8.pdb

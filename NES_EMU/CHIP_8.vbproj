@@ -154,7 +154,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CPU.vb" />
+    <Compile Include="CHIP-8\CPU.vb" />
     <Compile Include="FRM_LOAD.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,27 +162,20 @@
       <DependentUpon>FRM_LOAD.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GRAPHICS.vb" />
-    <Compile Include="JOYPAD.vb" />
+    <Compile Include="CHIP-8\GRAPHICS.vb" />
+    <Compile Include="CHIP-8\JOYPAD.vb" />
     <Compile Include="MODULE1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PPU.vb" />
-    <Compile Include="ROM.vb" />
-    <Compile Include="SOUND.vb" />
+    <Compile Include="CHIP-8\ROM.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FRM_LOAD.resx">
@@ -190,7 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -226,10 +218,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vfd.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
